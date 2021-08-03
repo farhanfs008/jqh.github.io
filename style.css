@@ -1,0 +1,826 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body
+{
+    background: #fff;
+    min-height: 100%;
+    overflow-x:hidden;
+}
+
+button {
+    margin: auto;
+}
+
+.tombol {
+display: grid;
+}  
+
+.button {
+    margin-top: 1% ;
+    background-color: #fff;
+    border: none;
+    padding: 15px 32px;
+    display: inline-block;
+    font-size: 1.5rem;
+    border: 4px solid #4CAF50;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button:hover {
+    background-color: #4CAF50; /* White */
+    color: #000;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/*Tulisan Button*/
+.button a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+    transition-duration: 0.4s;
+
+}
+
+.button a:hover {
+    font-weight: bold;
+    color: #fff;
+}
+
+.banner {
+    width: 100%;
+}
+
+
+.banner .banner-wrapper .banner-bg {
+    background-image: url(test.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.caption {
+    margin-top: -8%;
+}
+
+.caption h1 {
+    color: #000;
+    text-align: center;
+    padding-top: 20%;
+}
+
+.caption p {
+    padding-top: -2%;
+    color: #000;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.caption h2 {
+    padding-top: -2%;
+    color: #000;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+
+.logo-milad {
+    position: relative;
+    width: 194.5px;
+    background-position: center;
+    margin: 1% auto;
+    display: grid;
+}
+
+.container
+{
+    background-color: #e6e6e6ff;
+    width: 100%;
+    margin-top: 10%;
+    overflow: hidden;
+}
+
+.line {
+    background: -webkit-linear-gradient(#45b245ff 0%, #32c755ff 50%, #3cff00ff 100%);
+    background: -o-linear-gradient(#45b245ff 0%, #32c755ff 50%, #3cff00ff 100%);
+    background: linear-gradient(#45b245ff 0%, #32c755ff 50%, #3cff00ff 100%);
+    width: 150px;
+    height: 5px;
+    margin-bottom: 10px !important;
+    margin: auto;
+}
+
+.line-left {
+    background: -webkit-linear-gradient(#45b245ff 0%, #32c755ff 50%, #3cff00ff 100%);
+    background: -o-linear-gradient(#45b245ff 0%, #32c755ff 50%, #3cff00ff 100%);
+    background: linear-gradient(#45b245ff 0%, #32c755ff 50%, #3cff00ff 100%);
+    width: 150px;
+    height: 5px;
+    margin-bottom: 10px !important;
+    margin-left: 100px;
+}
+
+.line-left-lomba {
+    background: -webkit-linear-gradient(#45b245ff 0%, #32c755ff 50%, #3cff00ff 100%);
+    background: -o-linear-gradient(#45b245ff 0%, #32c755ff 50%, #3cff00ff 100%);
+    background: linear-gradient(#45b245ff 0%, #32c755ff 50%, #3cff00ff 100%);
+    width: 150px;
+    height: 5px;
+    margin-bottom: 10px !important;
+    margin-top: 2%;
+    margin-left: 100px;
+}
+
+
+/* Sticky*/
+.navbar-padding {
+    width: 100%;
+    margin: auto;
+    padding: 0 30px;
+}
+.navbar{
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 125px;  /* modifikasi responsive UI*/
+    z-index: 2;
+    padding: 25px 0;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    background: #35845d;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+}
+.navbar .navbar-padding{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    text-decoration: none;
+}
+.navbar .menu-list{
+    display: inline-flex;
+}
+.menu-list li{
+    list-style: none;
+}
+.menu-list li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.menu-list li a:hover{
+    color: #007bff;
+}
+
+.icon{
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-list .cancel-btn{
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+
+/* .navbar */
+
+
+/* Bio */
+.jargon
+{
+    text-align: center;
+    padding: 8%;
+}
+
+.jargon h5
+{
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.jargon h5 span
+{
+    font-weight: bold;
+}
+
+.section {
+    background-color: white;
+    height: 100%;
+    padding: auto 10px;
+}
+
+.lomba {
+    padding: 1% 8%;
+}
+
+.lomba h5 {
+    font-size:25px;
+}
+
+.lomba p {
+    font-size: 16px;
+}
+
+.lomba ul li {
+    margin-left: 17px;
+}
+
+.bio
+{
+    height: 100%;
+    padding-top: 2% ;
+    padding-bottom: 2%;
+    margin-left: 8%;
+}
+
+.bio h5 {
+    font-size:25px;
+}
+
+.bio p
+{
+    font-size: 16px;
+    font-weight: 400;
+    display: block;
+    box-sizing: border-box;
+    width: 480px;
+    color: #000;
+}
+
+
+.divisi ul li
+{
+    margin-left: 2.4%;
+    line-height: 25px;
+    font-weight: 400;
+    color: #000;
+    text-align: left;
+}
+/* //Bio */
+
+/* Content */
+.section-container {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    }
+    
+    .section-container .columns {
+    flex:0 0 auto;
+    width:50%;
+    }
+    
+    .section-container .columns.image {
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:contain;
+    }
+    
+    .section-container .columns.content .content-container {
+    padding:40px 50px;
+    }
+
+    .section-container .columns.content .content-container h5 {
+    font-weight:700;
+    font-size:25px;
+    margin-bottom:20px;
+    }
+    
+    .section-container .columns.content .content-container p {
+    font-weight:400;
+    font-size:16px;
+    margin-bottom:20px;
+    margin-bottom:15px;
+    text-align: left;
+    }
+/*  /Content */
+
+
+/* Daftar */
+.daftar ol li
+{
+    margin-left: 1.5%;
+    line-height: 25px;
+    font-weight: 400;
+    color: #000;
+    text-align: left;
+}
+
+.daftar ol li a {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.daftar h3
+{
+    margin: 5% 0 0 0;
+}
+
+.daftar .biaya
+{
+    margin-bottom: 10%;
+}
+
+#bio-media {
+    display: flex;
+    margin-left: 8%;
+}
+
+#peta {
+    margin-left: 8%;
+}
+
+/* /Daftar */
+
+/*Footer*/
+.container-footer{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.footer-col ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding-top: 70px;
+}
+.footer-col{
+   width: 33.333%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+
+.footer-col p{
+    color: #bbbbbb;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #35845d;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+.footer-bottom {
+    background-color: #000;
+    color: #fff;
+    padding: auto auto;
+    text-align: center;
+    margin-top: 170px;
+    width: 100%;
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+/* Style all font awesome icons */
+/*.fab {
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 5%;
+    color: black;
+}*/
+
+/* Add a hover effect if you want */
+
+
+/*Footer*/
+
+@media (max-width: 700px){
+    .navbar {
+        padding: 10px 30px;
+    }
+}
+
+  /* On screens that are 600px or less, set the background color to olive */
+
+@media (max-width: 1230px) {
+    .content{
+    padding: 0 60px;
+    }
+
+.navbar-padding{
+    padding: 0 60px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .content{
+    padding: 0 40px;
+    }
+
+.navbar-padding{
+    padding: 0 40px;
+    }
+}
+@media (max-width: 900px) {
+    .content{
+    padding: 0 30px;
+    }
+    .navbar-padding{
+    padding: 0 30px;
+    }
+}
+
+@media (max-width: 868px) {
+    html {
+        overflow-x: hidden;
+    }
+    body.disabled{
+        overflow: hidden;
+        position: fixed;
+    }
+    .icon{
+        display: block;
+    }
+    .icon.hide{
+        display: none;
+    }
+    .navbar .menu-list{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        max-width: 400px;
+        left: -100%;
+        top: 0px;
+        display: block;
+        padding: 40px 0;
+        text-align: center;
+        background: #222;
+        transition: all 0.3s ease;
+    }
+    .navbar.show .menu-list{
+        left: 0%;
+    }
+    .navbar .menu-list li{
+        margin-top: 45px;
+    }
+    .navbar .menu-list li a{
+        font-size: 23px;
+        margin-left: -100%;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    .navbar.show .menu-list li a{
+        margin-left: 0px;
+    }
+}
+
+
+@media screen and (max-width:767px) {
+    .navbar {
+        height: 100px;
+    }
+    .section-container {
+    flex-flow:row wrap;
+    }
+
+    .line-left,
+    .line-left-lomba {
+        margin-left: 8%;
+    }
+    #bio-media {
+        display: flex;
+        width: 50%;
+        height: auto;
+    }
+    #peta {
+        width: 300px;
+    }
+    .section-container .columns.image {
+    display:block;
+    order:1;
+    width:100%;
+    height:250px;
+    }
+    .navbar ul li a,
+    .navbar ul li {
+        color: #fff;
+    }
+    .section-container .columns.content {
+    display:block;
+    order:2;
+    width:100%;
+    }
+    .section-container .columns.content .content-container {
+    padding:20px 35px;
+    }
+    .section-container .columns.content .content-container h5 {
+    margin-bottom:5px;
+    }
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    html {
+        overflow-x: hidden;
+    }
+    .logo-milad {
+    height: 100px;
+    width: auto;
+}
+
+.navbar {
+float: none;
+width: 100%;
+}
+
+.navbar-padding {
+    padding: 0 0;
+    margin-top: -40px;
+}
+
+.navbar.sticky {
+    padding: 50px 30px;
+}
+
+.navbar {
+float: none;
+width: 100%;
+height: 50px;
+padding: 50px 30px;;
+}
+
+.navbar .logo {
+    padding: auto;
+}
+
+.navbar ul li a,
+.navbar ul li {
+    color: #fff;
+}
+
+.banner {
+    height: 500px;
+    width: 480px;
+}
+
+.banner .banner-wrapper {
+    height: 770px;
+}
+
+.button {
+    padding: 8px 16px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+}
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 8px 25px 0 rgba(0,0,0,0.19);
+}
+
+.button a{
+    font-size: 1.2rem;
+}
+.caption {
+    padding-top: 40px;
+}
+
+.caption h1 {
+    font-size:20px ;
+}
+
+.jargon h5 {
+    font-size: 26px;
+    padding: 8% 0;
+}
+.container {
+    width: 480px;
+}
+.section-container .columns.content {
+    display:block;
+    order:2;
+    width:100%;
+    }
+    .section-container .columns.content .content-container {
+    padding:20px 0px;
+    }
+    .section-container .columns.content .content-container h5 {
+    margin-bottom:5px;
+    }
+.bio p{
+    font-size: 16px;
+    width: 400px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.line-left {
+    margin-left: 8%;
+}
+
+.line-left-lomba {
+    margin-top: -10%;
+    margin-left: 8%;
+}
+
+.lomba ul li {
+    margin-left: 20px;
+}
+
+.footer-col{
+    width: 100%;
+}
+
+.footer-col p {
+    width: 350px;
+    font-family: 'Poppins';
+}
+
+.footer-bottom {
+    font-size: 14px;
+    width: 480px;
+    margin: 0;
+}
+
+}
+
+/*@media screen and (max-width: 360px) {
+.navbar-padding {
+    padding: 0 0;
+    margin-top: -40px;
+}
+.jargon h5 {
+    font-size: 20px;
+}
+
+#profile-yt iframe{
+    margin-left: 0;
+    margin-top: 10px;
+    width: 300px;
+    height: auto;
+}
+
+.banner {
+    height: 760px;
+    width: auto;
+}
+
+.banner .banner-wrapper {
+    height: 770px;
+}
+
+.bio {
+    width: 100%;
+}
+
+.bio h5{
+    font-size: 20px;
+}
+
+.bio p{
+    font-size: 14px;
+    width: 100%;
+    padding-right: 39px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.line-left {
+    margin-left: 28.8px;
+}
+
+.banner .banner-wrapper .banner-bg {
+    margin-top: -10%;
+    height: 770px;
+}
+
+.banner .caption {
+    margin-top: 10%;
+    padding-top: 15%;
+}
+
+.banner .caption h1 {
+    font-size: 20px;
+    padding: 45px 28.8px;
+}
+
+.banner .caption h2 {
+    font-size: 20px;
+}
+
+.banner .caption p {
+    padding: 0px 28.8px;
+    font-size: 14px;
+}
+
+.logo-milad {
+    margin: 5% 36%;
+}
+
+.lomba {
+    padding: 20px;
+    font-size: 16px;
+}
+
+.section-container .columns.content {
+    display:block;
+    order:2;
+    width:100%;
+    }
+    .section-container .columns.content .content-container {
+    padding:20px 0px;
+    }
+    .section-container .columns.content .content-container h5 {
+    margin-bottom:5px;
+    }
+
+.button {
+    margin: 5% 28%;
+    padding: 15px 32px;
+    font-size: 1rem;
+}
+
+.footer-bottom {
+    font-size: 12px;
+    height: 20px;
+}
+}*/
+
