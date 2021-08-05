@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 *
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins',sans-serif;
 }
 
 html {
@@ -65,11 +66,13 @@ display: grid;
 
 
 .banner .banner-wrapper .banner-bg {
-    background-image: url(test.svg);
+    background: url(test.svg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     position: relative;
+    max-height: 100vh;
 }
 
 .caption {
@@ -145,64 +148,106 @@ display: grid;
 }
 
 
-/* Sticky*/
-.navbar-padding {
-    width: 100%;
-    margin: auto;
-    padding: 0 30px;
-}
-.navbar{
-    overflow: hidden;
-    top: 0;
-    bottom: 0;
-    position: fixed;
-    width: 100%;
-    height: 125px;  /* modifikasi responsive UI*/
-    z-index: 2;
-    padding: 25px 0;
-    transition: all 0.3s ease;
-}
-.navbar.sticky{
+header {
     background: #35845d;
-    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
 }
-.navbar .navbar-padding{
+
+.logo {
+    margin: 15px 0 0 0;
+}
+
+.nav-toggle {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+}
+
+.nav-toggle:focus ~ .nav-toggle-label {
+    outline: 3px solid rgba(lightblue, .75);
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
-.navbar .logo a{
-    text-decoration: none;
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
 }
-.navbar .menu-list{
-    display: inline-flex;
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
 }
-.menu-list li{
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: #35845d;
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
-.menu-list li a{
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    margin-left: 25px;
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a {
+    color: white;
     text-decoration: none;
-    transition: all 0.3s ease;
-}
-.menu-list li a:hover{
-    color: #007bff;
-}
-
-.icon{
-    color: #fff;
-    font-size: 20px;
-    cursor: pointer;
-    display: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
 }
 
-.menu-list .cancel-btn{
-    position: absolute;
-    right: 30px;
-    top: 20px;
+nav a:hover {
+    color: #000;
+}
+
+.nav-toggle:checked ~ nav {
+    transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
 }
 
 /* .navbar */
@@ -269,7 +314,6 @@ display: grid;
     width: 480px;
     color: #000;
 }
-
 
 .divisi ul li
 {
@@ -472,20 +516,8 @@ display: grid;
 
 /*Footer*/
 
-@media (max-width: 700px){
-    .navbar {
-        padding: 10px 30px;
-    }
-}
-
-  /* On screens that are 600px or less, set the background color to olive */
-
 @media (max-width: 1230px) {
     .content{
-    padding: 0 60px;
-    }
-
-.navbar-padding{
     padding: 0 60px;
     }
 }
@@ -494,67 +526,84 @@ display: grid;
     .content{
     padding: 0 40px;
     }
-
-.navbar-padding{
-    padding: 0 40px;
-    }
 }
 @media (max-width: 900px) {
     .content{
     padding: 0 30px;
     }
-    .navbar-padding{
-    padding: 0 30px;
-    }
 }
 
 @media (max-width: 868px) {
-    html {
-        overflow-x: hidden;
+
+}
+
+/* Bener*/
+@media screen and (min-width: 800px) {
+    .nav-toggle-label {
+    display: none;
     }
-    body.disabled{
-        overflow: hidden;
-        position: fixed;
+
+    header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
     }
-    .icon{
-        display: block;
+    
+    .logo {
+    grid-column: 2 / 3;
     }
-    .icon.hide{
-        display: none;
+    
+    nav {
+    all: unset; /* this causes issues with Edge, since it's unsupported */
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1,1);
+    background: none;
+    top: initial;
+    left: initial;
+      /* end Edge support stuff */
+    
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     }
-    .navbar .menu-list{
-        position: fixed;
-        height: 100vh;
-        width: 100%;
-        max-width: 400px;
-        left: -100%;
-        top: 0px;
-        display: block;
-        padding: 40px 0;
-        text-align: center;
-        background: #222;
-        transition: all 0.3s ease;
+    
+    nav ul {
+    display: flex;
     }
-    .navbar.show .menu-list{
-        left: 0%;
+    
+    nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
     }
-    .navbar .menu-list li{
-        margin-top: 45px;
+    
+    nav a {
+    opacity: 1;
+    position: relative;
     }
-    .navbar .menu-list li a{
-        font-size: 23px;
-        margin-left: -100%;
-        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: black;
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
     }
-    .navbar.show .menu-list li a{
-        margin-left: 0px;
+    
+    nav a:hover::before {
+    transform: scale(1,1);
     }
 }
 
-
 @media screen and (max-width:767px) {
-    .navbar {
-        height: 100px;
+    .banner {
+        margin-top: 20px;
     }
     .section-container {
     flex-flow:row wrap;
@@ -577,6 +626,9 @@ display: grid;
     order:1;
     width:100%;
     height:250px;
+    }
+    .jargon {
+        padding: 8% 7%;
     }
     .navbar ul li a,
     .navbar ul li {
@@ -601,42 +653,9 @@ display: grid;
 
 
 @media screen and (max-width: 480px) {
-    html {
-        overflow-x: hidden;
-    }
     .logo-milad {
     height: 100px;
     width: auto;
-}
-
-.navbar {
-float: none;
-width: 100%;
-}
-
-.navbar-padding {
-    padding: 0 0;
-    margin-top: -40px;
-}
-
-.navbar.sticky {
-    padding: 50px 30px;
-}
-
-.navbar {
-float: none;
-width: 100%;
-height: 50px;
-padding: 50px 30px;;
-}
-
-.navbar .logo {
-    padding: auto;
-}
-
-.navbar ul li a,
-.navbar ul li {
-    color: #fff;
 }
 
 .banner {
@@ -722,49 +741,64 @@ padding: 50px 30px;;
 
 }
 
-/*@media screen and (max-width: 360px) {
-.navbar-padding {
-    padding: 0 0;
-    margin-top: -40px;
+@media screen and (max-width: 376px) {
+
+.line {
+    text-align: center;
+    margin-bottom: 0;
 }
+
 .jargon h5 {
     font-size: 20px;
+    margin-left: -10px;
+    width: 340px;
+    margin-top: -5%;
+    margin-bottom: -5%;
 }
 
-#profile-yt iframe{
+#bio-media{
     margin-left: 0;
     margin-top: 10px;
-    width: 300px;
     height: auto;
+    display: inline;
 }
 
+#profile-yt {
+    width: 376px;
+}
+
+#peta {
+    margin-left: 0;
+    width: 376px;
+}
+
+#lomba {
+    margin-top: 100px;
+}
 .banner {
-    height: 760px;
+    height: 650px;
     width: auto;
 }
 
-.banner .banner-wrapper {
-    height: 770px;
-}
-
 .bio {
-    width: 100%;
+    width: 300px;
+    padding: 2% 0;
+    margin-left: 20px;
 }
 
 .bio h5{
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .bio p{
-    font-size: 14px;
-    width: 100%;
-    padding-right: 39px;
+    font-size: 16px;
+    width: 300px;
     margin-bottom: 10px;
     text-align: justify;
 }
 
-.line-left {
-    margin-left: 28.8px;
+.line-left, .line-left-lomba {
+    margin-left: 20px;
 }
 
 .banner .banner-wrapper .banner-bg {
@@ -779,15 +813,16 @@ padding: 50px 30px;;
 
 .banner .caption h1 {
     font-size: 20px;
-    padding: 45px 28.8px;
+    padding: 20px 28.8px;
+    margin-top: 45px;
 }
 
 .banner .caption h2 {
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .banner .caption p {
-    padding: 0px 28.8px;
+    padding: 0px 70px;
     font-size: 14px;
 }
 
@@ -797,13 +832,31 @@ padding: 50px 30px;;
 
 .lomba {
     padding: 20px;
+}
+
+.lomba {
+    font-size: 24px;
+}
+
+.lomba p,
+.lomba ul li {
     font-size: 16px;
+}
+
+.lomba p {
+    width: 360px;
+}
+
+
+.section-container {
+    width: 360px;
 }
 
 .section-container .columns.content {
     display:block;
     order:2;
     width:100%;
+    padding: 0 0;
     }
     .section-container .columns.content .content-container {
     padding:20px 0px;
@@ -811,7 +864,13 @@ padding: 50px 30px;;
     .section-container .columns.content .content-container h5 {
     margin-bottom:5px;
     }
+    .section-container .columns.content .content-container p {
+    width: 350px;
+    }
 
+.section-container .columns.content .content-container {
+    margin: 0;
+}
 .button {
     margin: 5% 28%;
     padding: 15px 32px;
@@ -822,5 +881,4 @@ padding: 50px 30px;;
     font-size: 12px;
     height: 20px;
 }
-}*/
-
+}
