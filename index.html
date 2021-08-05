@@ -13,25 +13,20 @@
 <body>
     <!--header-->
     <header>
-        <nav class="navbar">
-            <div class="navbar-padding">
-                <div class="logo"><a href="#"><img src="logo-jqh.png" id="logo-jqh" alt="Logo JQH"></div>
-                </a>
-                <ul class="menu-list">
-                    <div class="icon cancel-btn">
-                        <i class="fas fa-times"></i>
-                    </div>
-                    <li><a href="#">BERANDA</a></li>
-                    <li><a href="#biografi">BIO</a></li>
-                    <li><a href="#lomba">LOMBA</a>
-                    <li><a href="#info">INFO</a></li>
-                    <li><a href="#pemenang">PEMENANG</a></li>
-                </ul>
-                <div class="icon menu-btn">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </div>
+        <h1><a href="#"><img src="logo-jqh.png" class="logo" alt="Logo JQH" style="height: 60px;"></h1></a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav>
+            <ul>
+                <li><a href="#">BERANDA</a></li>
+                <li><a href="#bio">BIO</a></li>
+                <li><a href="#lomba">LOMBA</a></li>
+                <li><a href="#info">INFO</a></li>
+                <li><a href="#pemenang">PEMENANG</a></li>
+            </ul>
         </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
     </header>
     <!--// header-->
 
@@ -46,7 +41,7 @@
                     <p class="animated animatedFadeInUp fadeInUp">"Refleksi Seni Islami dalam Bingkai Kebudayaan"</p>
                 </div>
                 <div class="tombol">
-                    <button class="button animated animatedFadeInUp fadeInUp"><a href="https://www.jqhalwustha.wordpress.com" target=”_blank” rel="noopener noreferrer">KUNJUNGI</a></button>
+                    <button class="button animated animatedFadeInUp fadeInUp"><a href="https://jqhalwustha.wordpress.com" target=”_blank” rel="noopener noreferrer">KUNJUNGI</a></button>
                 </div>
             </div>
         </div>
@@ -55,7 +50,7 @@
     <!--Bio-->
     <div class="container">
         <div class="line"></div>
-            <div class="jargon"><h5>Memberdayakan Umat dengan <span>Dzikir</span> dan <span>Sholawat</span></h5></div>
+            <div class="jargon"><h5>Memberdayakan Umat melalui <span>Dzikir</span> dan <span>Sholawat</span></h5></div>
                 <div class="section" id="biografi">
                     <div class="line-left">
                     </div>
@@ -65,9 +60,9 @@
                         mahasiswa dalam bidang seni dan keilmuan Islam.</p>
                     </div>
                     <div id="bio-media">
-                        <iframe width="492.665" height="277.124" src="https://www.youtube.com/embed/lYdMnwQdQUo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen target=”_blank” id="profile-yt" rel="noopener noreferrer"></iframe>
+                        <iframe width="485" height="270" src="https://www.youtube.com/embed/lYdMnwQdQUo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen target=”_blank” id="profile-yt" rel="noopener noreferrer"></iframe>
                         <div class="maps-responsive">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.149523132975!2d110.73248121477675!3d-7.558670894548875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a14c215cc8bbd%3A0x27c268341f7725a!2sUniversitas%20Islam%20Negeri%20Raden%20Mas%20Said%20Surakarta!5e0!3m2!1sid!2sid!4v1627320239167!5m2!1sid!2sid" id="peta" width="492.665" height="277.124" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.149523132975!2d110.73248121477675!3d-7.558670894548875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a14c215cc8bbd%3A0x27c268341f7725a!2sUniversitas%20Islam%20Negeri%20Raden%20Mas%20Said%20Surakarta!5e0!3m2!1sid!2sid!4v1627320239167!5m2!1sid!2sid" id="peta" width="485" height="270" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                         </div>
                     </div>
                         
@@ -95,10 +90,8 @@
                         <div class="content-container">
                             <h5>Festival Hadroh</h5>
                             <p>
-                                - Mengisi formulir pendaftaran di Link : <br>
-                                <a href="https://s.id/Pendaftaran-FestivalHadrah2021" target=”_blank” rel="noopener noreferrer">https://s.id/Pendaftaran-FestivalHadrah2021</a><br>
-                                dengan panduan Juknis yang bisa di lihat pada<br>
-                                <a href="https://s.id/JuknisSGQix" target=”_blank” rel="noopener noreferrer">https://s.id/JuknisSGQix</a><br><br>
+                                - Mengisi formulir pendaftaran di link
+                                <a href="https://s.id/Pendaftaran-FestivalHadrah2021" target=”_blank” rel="noopener noreferrer">Pendaftaran Festival Hadrah</a> dengan panduan Juknis yang bisa dilihat <a href="https://s.id/JuknisSGQix" target=”_blank” rel="noopener noreferrer">disini</a><br><br>
                                 - Membayar administrasi<br>
                                 💸 HTM : 100K<br><br>
                                 - Pembayaran HTM via Transfer melalui: <br>
@@ -115,8 +108,8 @@
                                 <br>
                                 <br>
                                 📞 CONTACT PERSON<br>
-                                <a href="http://wa.me/6281393155076" target="_blank">wa.me/6281393155076</a> (Melly)<br>
-                                <a href="http://wa.me/62895422441732" target="_blank">wa.me/62895422441732</a> (Cantika)<br>
+                                <a href="http://wa.me/6281393155076" target="_blank">Kirim Pesan</a> (Melly)<br>
+                                <a href="http://wa.me/62895422441732" target="_blank">Kirim Pesan</a> (Cantika)<br>
                                 <br>
                                 Yokk !!! Segera daftarkan juara kalian yaakk 😉 Jangan sampai ketinggalan 🤗
                                 </p>
@@ -128,10 +121,8 @@
                         <div class="content-container">
                             <h5>Musabaqoh Tilawatil Qur'an</h5>
                             <p>
-                                - Mengisi formulir pendaftaran di Link : <br>
-                                <a href="https://bit.ly/FormPendaftaranMTQ-SGQ-IX" target=”_blank” rel="noopener noreferrer">https://bit.ly/FormPendaftaranMTQ-SGQ-IX</a><br>
-                                dengan panduan Juknis yang bisa di lihat pada<br>
-                                <a href="https://s.id/JuknisSGQix" target=”_blank” rel="noopener noreferrer">https://s.id/JuknisSGQix</a>
+                                - Mengisi formulir pendaftaran di link <a href="https://bit.ly/FormPendaftaranMTQ-SGQ-IX" target=”_blank” rel="noopener noreferrer">Pendaftaran MTQ</a> dengan panduan Juknis yang bisa dilihat  
+                                <a href="https://s.id/JuknisSGQix" target=”_blank” rel="noopener noreferrer">disini</a>
                                 <br><br>
             
                                 💸 HTM: 20K<br><br>
@@ -148,8 +139,8 @@
                                 <br>
                                 <br>
                                 📞 CONTACT PERSON<br>
-                                <a href="http://wa.me/6281327304704" target="_blank">wa.me/6281393155076</a>   (Reza)<br>
-                                <a href="http://wa.me/628816605745" target="_blank">wa.me/628816605745</a> (Khusnul)<br>
+                                <a href="http://wa.me/6281327304704" target="_blank">Kirim Pesan</a>   (Reza)<br>
+                                <a href="http://wa.me/628816605745" target="_blank">Kirim Pesan</a> (Khusnul)<br>
                             </p>
                         </div>
                     </div>
@@ -165,10 +156,9 @@
                         <div class="content-container">
                             <h5>Musabaqoh Syarhil Qur'an</h5>
                             <p>
-                                - Mengisi formulir pendaftaran di Link : <br>
-                                <a href="http://bit.ly/Msq2021" target=”_blank” rel="noopener noreferrer">http://bit.ly/Msq2021</a><br>
-                                dengan panduan Juknis yang bisa di lihat pada<br>
-                                <a href="https://s.id/JuknisSGQix" target=”_blank” rel="noopener noreferrer">https://s.id/JuknisSGQix</a><br>
+                                - Mengisi formulir pendaftaran di Link
+                                <a href="http://bit.ly/Msq2021" target=”_blank” rel="noopener noreferrer">Pendaftaran MSQ</a>
+                                dengan panduan Juknis yang bisa dilihat <a href="https://s.id/JuknisSGQix" target=”_blank” rel="noopener noreferrer">disini</a><br>
                                 <br>
                                 - Peserta mengumpulkan karya berupa video ke nomor telegram<br>
                                 <a href="https://t.me/sherlytacahayu25" target=”_blank” rel="noopener noreferrer">t.me/sherlytacahayu25</a> (Sherlyta)
@@ -188,8 +178,8 @@
                                 <br>
                                 <br>
                                 📞 CONTACT PERSON<br>
-                                <a href="http://wa.me/6288239213228" target="_blank">wa.me/6288239213228</a> (Asyrofatul)<br>
-                                <a href="http://wa.me/6285800296310" target="_blank">wa.me/6285800296310</a> (Abdus Salam)<br> 
+                                <a href="http://wa.me/6288239213228" target="_blank">Kirim Pesan</a> (Asyrofatul)<br>
+                                <a href="http://wa.me/6285800296310" target="_blank">Kirim Pesan</a> (Abdus Salam)<br> 
                             </p>
                         </div>
                     </div>
@@ -199,10 +189,7 @@
                         <div class="content-container">
                             <h5>Musabaqoh Khottil Qur'an</h5>
                             <p>
-                                - Mengisi formulir pendaftaran di Link : <br>
-                                <a href="https://s.id/PendaftaranKaligrafi9" target=”_blank” rel="noopener noreferrer">https://s.id/PendaftaranKaligrafi9</a><br>
-                                dengan panduan Juknis yang bisa di lihat pada<br>
-                                <a href="https://s.id/JuknisSGQix" target=”_blank” rel="noopener noreferrer">https://s.id/JuknisSGQix</a><br><br>
+                                - Mengisi formulir pendaftaran di Link <a href="https://s.id/PendaftaranKaligrafi9" target=”_blank” rel="noopener noreferrer">Pendaftaran Kaligrafi</a> dengan panduan Juknis yang bisa dilihat <a href="https://s.id/JuknisSGQix" target=”_blank” rel="noopener noreferrer">disini</a><br><br>
                                 📩 Pengiriman Karya: kaligrafijqhalwustha20@gmail.com<br><br>
             
                                 💸 HTM: 20K<br><br>
@@ -219,8 +206,8 @@
                                 <br>
                                 <br>
                                 📞 CONTACT PERSON<br>
-                                <a href="http://wa.me/6285641096198" target="_blank">wa.me/6285641096198</a> (Umi Nur) <br>
-                                <a href="http://wa.me/6288237141530" target="_blank">wa.me/6288237141530</a> (Siti Mubaroh)<br>
+                                <a href="http://wa.me/6285641096198" target="_blank">Kirim Pesan</a> (Umi Nur) <br>
+                                <a href="http://wa.me/6288237141530" target="_blank">Kirim Pesan</a> (Siti Mubaroh)<br>
                             </p>
                             
                         </div>
@@ -237,10 +224,8 @@
                         <div class="content-container">
                             <h5>Musabaqoh Hifdzil Qur'an</h5>
                             <p>
-                                - Mengisi formulir pendaftaran di Link : <br>
-                                <a href="https://s.id/DaftarLombaMHQ21" target=”_blank” rel="noopener noreferrer">https://s.id/DaftarLombaMHQ21</a><br>
-                                dengan panduan Juknis yang bisa di lihat pada<br>
-                                <a href="https://s.id/JuknisSGQix" target=”_blank” rel="noopener noreferrer">https://s.id/JuknisSGQix</a><br>
+                                - Mengisi formulir pendaftaran di Link 
+                                <a href="https://s.id/DaftarLombaMHQ21" target=”_blank” rel="noopener noreferrer">Pendaftaran MHQ</a> dengan panduan Juknis yang bisa dilihat <a href="https://s.id/JuknisSGQix" target=”_blank” rel="noopener noreferrer">disini</a><br>
                                 <br>
                                 💸 HTM: 25K<br><br>
                                 - Pembayaran HTM via Transfer melalui: <br>
@@ -256,14 +241,39 @@
                                 <br>
                                 <br>
                                 📞 CONTACT PERSON<br>
-                                <a href="http://wa.me//6285700141298" target="_blank">wa.me//6285700141298</a> (Aulia) <br>
-                                <a href="http://wa.me//6285799333191" target="_blank">wa.me//6285799333191</a> (Alfina)<br>
+                                <a href="http://wa.me//6285700141298" target="_blank">Kirim Pesan</a> (Aulia) <br>
+                                <a href="http://wa.me//6285799333191" target="_blank">Kirim Pesan</a> (Alfina)<br>
                             </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-container">
+                    <div class="columns image" style="background-image:url('img/pamflet-besar.jpg')">
+                        &nbsp;
+                    </div>
+                    <div class="columns content">
+                        <div class="content-container">
+                            <h5 id="info">Info Tambahan</h5>
+                            <ul>
+                                <li>Pengumuman pemenang lomba akan dipublikasikan lewat web ini dan sosmed JQH yang lainnya. </li>
+                                <li>Mohon untuk memperhatikan dan menaati aturan perlombaan</li>
+                                <li>Untuk info tambahan lainnya, akan disampaikan juga melalui website ini</li>
+                                <li>Link Juknis dapat dilihat <a href="https://s.id/JuknisSGQix">disini</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div> <!--.Lomba-->
         </div> <!--#Lomba-->
+        <div class="section" id="pemenang">
+            <div class="line-left">
+            </div>
+            <div class="bio"><h5>Pemenang</h5>
+                <p>Kami ucapkan selamat kepada para pemenang yang telah terpilih dalam perlombaan tahun ini</p>
+            </div>
+            
+                
+        </div>
     </div>
 
 
@@ -275,7 +285,7 @@
         <div class="container-footer">
             <div class="row">
                 <div class="footer-col">
-                    <a href="https://www.jqhalwustha.wordpress.com" target=”_blank” rel="noopener noreferrer" class="logo-footer"><img src="logo-jqh.png" id="logo-jqh" alt="Logo JQH"></a>
+                    <a href="https://jqhalwustha.wordpress.com" target=”_blank” rel="noopener noreferrer" class="logo-footer"><img src="logo-jqh.png" id="logo-jqh" alt="Logo JQH"></a>
                     <h4>kontak</h4>
                     <p><i class="fas fa-envelope"></i> Email<br>ukmjqhalwustha@gmail.com</p>
                     <br>
@@ -314,29 +324,6 @@
    </footer>
 
     <!-- // footer-->
-
-    <script>
-        const body = document.querySelector("body");
-        const navbar = document.querySelector(".navbar");
-        const menuBtn = document.querySelector(".menu-btn");
-        const cancelBtn = document.querySelector(".cancel-btn");
-        menuBtn.onclick = ()=>{
-        navbar.classList.add("show");
-        menuBtn.classList.add("hide");
-        body.classList.add("disabled");
-        }
-        cancelBtn.onclick = ()=>{
-        body.classList.remove("disabled");
-        navbar.classList.remove("show");
-        menuBtn.classList.remove("hide");
-        }
-        window.onscroll = ()=>{
-        this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
-        }
-    </script>
-
-    
-    <script src="navbar.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="reveal.js"></script>
 </body>
