@@ -66,7 +66,7 @@ display: grid;
 
 
 .banner .banner-wrapper .banner-bg {
-    background: url(test.svg) no-repeat center center fixed;
+    background: url(test.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -653,6 +653,13 @@ nav a:hover {
 
 
 @media screen and (max-width: 480px) {
+    header {
+        height: 75px;
+    }
+    header .logo {
+        margin: 12px 0;
+        height: 50px;
+    }
     .logo-milad {
     height: 100px;
     width: auto;
@@ -742,6 +749,13 @@ nav a:hover {
 }
 
 @media screen and (max-width: 412px) {
+    header {
+        height: 75px;
+    }
+    header .logo {
+        margin: 12px 0;
+        height: 50px;
+    }
     .banner {
         width: 412px;
     }
@@ -757,6 +771,10 @@ nav a:hover {
     .jargon h5 {
         font-size: 20px;
         width: 340px;
+    }
+
+    .bio p{
+        width: 350px;
     }
 
     #bio-media{
@@ -778,11 +796,19 @@ nav a:hover {
     #lomba {
         margin-top: 100px;
     }
-    
+    .footer-bottom {
+        width: 412px;
+    }
 }
 
 @media screen and (max-width: 376px) {
-
+    header {
+        height: 75px;
+    }
+    header .logo {
+        margin: 12px 0;
+        height: 50px;
+    }
 .line {
     text-align: center;
     margin-bottom: 0;
@@ -905,7 +931,7 @@ nav a:hover {
     margin-bottom:5px;
     }
     .section-container .columns.content .content-container p {
-    width: 350px;
+    width: 330px;
     }
 
 .section-container .columns.content .content-container {
@@ -920,5 +946,162 @@ nav a:hover {
 .footer-bottom {
     font-size: 12px;
     height: 20px;
+    width: 376px;
 }
 }
+
+@media screen and (max-width: 360px) {
+    header {
+        height: 75px;
+    }
+    header .logo {
+        margin: 12px 0;
+        height: 50px;
+    }
+    .line {
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .container {
+        width: 360px;
+    }
+    .jargon h5 {
+        font-size: 20px;
+        margin: 0 0;
+        width: 300px;
+    }
+    
+    #bio-media{
+        margin-left: 0;
+        margin-top: 10px;
+        height: auto;
+        display: inline;
+    }
+    
+    #profile-yt {
+        width: 376px;
+    }
+    
+    #peta {
+        margin-left: 0;
+        width: 376px;
+    }
+    
+    #lomba {
+        margin-top: 100px;
+    }
+    .banner {
+        height: 650px;
+        width: auto;
+    }
+    
+    .bio {
+        width: 300px;
+        padding: 2% 0;
+        margin-left: 20px;
+    }
+    
+    .bio h5{
+        font-size: 24px;
+    }
+    
+    .bio p{
+        font-size: 16px;
+        width: 300px;
+        margin-bottom: 10px;
+        text-align: justify;
+    }
+    
+    .line-left, .line-left-lomba {
+        margin-left: 20px;
+    }
+    
+    .banner .banner-wrapper .banner-bg {
+        margin-top: -10%;
+        height: 770px;
+    }
+    
+    .banner .caption {
+        margin-top: 10%;
+        padding-top: 15%;
+    }
+    
+    .banner .caption h1 {
+        font-size: 20px;
+        padding: 20px 28.8px;
+        margin-top: 45px;
+    }
+    
+    .banner .caption h2 {
+        font-size: 22px;
+    }
+    
+    .banner .caption p {
+        padding: 0px 70px;
+        font-size: 14px;
+    }
+    
+    .logo-milad {
+        margin: 5% 36%;
+    }
+    
+    .lomba {
+        padding: 20px;
+    }
+    
+    .lomba {
+        font-size: 24px;
+    }
+    
+    .lomba p,
+    .lomba ul li {
+        font-size: 16px;
+    }
+    
+    .lomba p,
+    .lomba h5{
+        width: 330px;
+    }
+    
+    .section-container {
+        width: 360px;
+    }
+    
+    .section-container .columns.content {
+        display:block;
+        order:2;
+        width:100%;
+        padding: 0 0;
+        }
+        .section-container .columns.content .content-container {
+        padding:20px 0px;
+        }
+        .section-container .columns.content .content-container h5 {
+        margin-bottom:5px;
+        }
+        .section-container .columns.content .content-container p {
+        width: 330px;
+        }
+    
+    .section-container .columns.content .content-container {
+        margin: 0;
+    }
+    .button {
+        margin: 5% 28%;
+        padding: 15px 32px;
+        font-size: 1rem;
+    }
+
+    .section-container .columns.image {
+        width: 300px;
+    }
+    
+    .section-container .columns.content .content-container ul li{
+        width: 270px;
+    }
+    .footer-bottom {
+        font-size: 12px;
+        height: 20px;
+        width: 360px;
+    }
+    }
